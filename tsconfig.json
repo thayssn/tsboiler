@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "rootDir": ".",
     "module": "commonjs",
-    "lib": ["es6"],
-    "allowJs": true,
-    "outDir": "build",
-    "rootDir": "src",
     "strict": true,
-    "noImplicitAny": true,
+    "baseUrl": "./src",
+    "outDir": "build",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "es6",
+    "removeComments": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "types": ["node", "jest"],
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "paths": {
+      "@folder/*": ["folder/*"]
+    }
   }
 }
